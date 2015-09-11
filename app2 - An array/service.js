@@ -102,9 +102,13 @@ var myData = [
 ];
 
 
+angular.module('arrayApp').service('employeeService', function(){
 
 
-
+this.getEmployees = function(){
+    return myData;
+};
+});
 
 
 
