@@ -1,6 +1,14 @@
 <html ng-app="myApp">
 	<body ng-controller="myCtrl">
-		<li class="row" ng-repeat="employee in employees">
+        <input ng-model="daFilter.name"></input>
+		<li class="row">
+		    <span class="personData">name</span>
+		    <span class="personData">email</span>
+		    <span class="personData">dateEmployed</span>
+		    <span class="personData">phone</span>
+		    
+		</li>
+           <li class="row" ng-repeat="employee in employees | filter: doneFilter">
 		    <span class="personData">{{employee.name}}</span>
 		    <span class="personData">{{employee.email}}</span>
 		    <span class="personData">{{employee.dateEmployed}}</span>
